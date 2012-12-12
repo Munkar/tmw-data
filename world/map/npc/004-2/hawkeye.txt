@@ -1,0 +1,55 @@
+// Hawkeye the bow master
+
+004-2.gat,28,22,0|script|Hawkeye|128,
+{
+    if(QUEST_DesertBow == 3) goto L_Done;
+    if(QUEST_DesertBow == 2) goto L_GetBow;
+    if(QUEST_DesertBow == 1) goto L_Check;
+
+    mes "[Hawkeye]";
+    mes "Hello, "+strcharinfo(0)+"! I am Hawkeye, master of the greatest bow in the desert. It is very fast and powerful. Do you like to get it?";
+    menu
+        "Yes.", -,
+        "No.", L_Close;
+    mes "[Hawkeye]";
+    mes "Well then, if you bring me 100 skins of desert snake and 100,000 zeny, i will make you the perfect desert bow in your life.";
+    menu
+        "Ok.", -,
+        "What a ripoff?", L_Close;
+    mes "[Hawkeye]";
+    mes "I will wait for you.";
+    set QUEST_DesertBow, 1;
+    close;
+L_Check:
+    mes "[Hawkeye]";
+    mes "So, let's check if you got stuff that I need, "+strcharinfo(0)+".";
+    if (countitem("SnakeSkin") < 100 || Zeny < 100000) goto L_NotEnough;
+    delitem "SnakeSkin", 100;
+    set Zeny, Zeny - 100000;
+    set QUEST_DesertBow, 2;
+L_GetBow:
+    getinventorylist;
+    if (@inventorylist_count == 100) goto L_noRoom;
+    mes "[Hawkeye]";
+    mes "Well, "+strcharinfo(0)+", now take this bow.";    
+    getitem "DesertBow", 1;
+    set QUEST_DesertBow, 3;
+    close;
+L_noRoom:
+    mes "[Hawkeye]";
+    mes "Sorry, you have not enough room in your inventory, "+strcharinfo(0)+".";
+    clode;    
+L_NotEnough:
+    mes "[Hawkeye]";
+    mes "You have not enough zeny or too few snake skins, "+strcharinfo(0)+".";
+    close;
+L_Done:
+    mes "[Hawkeye]";
+    mes "Enjoy with your powerful bow, "+strcharinfo(0)+".";
+    close;
+L_Close:
+    mes "[Hawkeye]";
+    mes "it's pity if "+strcharinfo(0)+" will walk through the desert without a proper weapon. Bye.";
+    close;
+    end;
+}

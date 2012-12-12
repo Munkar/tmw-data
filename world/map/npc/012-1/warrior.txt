@@ -1,0 +1,144 @@
+//----------------------------------------------------
+// Desert Helmet quest
+// Create Quest: Darlord (Depredador) 
+//----------------------------------------------------
+
+012-1.gat,122,115,0|script|Warrior|126,{
+	if(QUEST_Warrior1 == 2) goto L_Done1;
+	if(QUEST_Warrior1 == 1) goto L_Ask2; 
+
+        if (BaseLevel >= 60 && countitem("IronOre") > 0)
+		goto L_Ask1;
+
+	mes "[Warrior]";
+	mes "\"Hello! Calm wind today!\"";
+	menu
+		"Yes, but I like windy days.", L_Wind,
+		"Hmm... sorry but gotta go...", L_Go;
+	close;
+
+L_Go:
+	mes "[Warrior]";
+	mes "\"Ok, good trip then.\"";
+	close;
+
+L_Wind:
+	mes "[Warrior]";
+	mes "\"I don't like them, i can't fly straight.\"";
+	close;
+
+// ----------------------------------------------------
+// Desert Helmet quest start
+// ----------------------------------------------------
+L_Ask1:
+	mes "[Warrior]";
+	mes "\"Hello "+ strcharinfo(0) + "! I see you have some [Iron Ore] with you!\"";
+
+	menu
+		"Yes... right... what about [Iron Ore]?", L_Quest1,
+		"Yes, but i have grown attached to [Iron Ore]...", L_No,
+		"Right, but now i have business in other places.", L_Rude;
+	close;
+
+L_Quest1:
+	mes "[Warrior]";
+	mes "\"Iron Ore is a really special item. People without helmets can't understand [Iron Ore] real power, anyway if you could give me some of them you would understand why they are so special.\"";
+
+	menu
+		"Certainly, you can have all my [Iron Ore]", L_Check1,
+		"Sorry but i am not interested in that.", L_No;
+	close;
+
+L_No:
+	mes "[Warrior]";
+	mes "\"Ok, come back me when you want to know [Iron Ore] real power\"";
+	close;
+
+L_Rude:
+	mes "[Warrior]";
+	mes "\"Well, good luck with your business.\"";
+	close;
+
+L_Check1:
+	if (countitem("IronOre") > 11)
+		goto L_Progress1;
+	goto L_More_Needed1;
+
+L_More_Needed1:
+	mes "[Warrior]";
+	mes "\"Your [Iron Ore] are not enough, please look for more.\"";
+	close;
+
+// ----------------------------------------------------
+// Got Iron Ores
+// ----------------------------------------------------
+L_Progress1:
+	delitem "IronOre", 12;
+	getexp 10000, 0;
+	set QUEST_Warrior1, 1;
+	mes "[Warrior]";
+	mes "\"Perfect! you have enough Iron Ore, i will take them for now  but i need other items in order to bring them to life.\"";
+
+L_Ask2:
+	mes "[Warrior]";
+	mes "\"I need a two Infantry Helmet to enchant them, one Warlord Helmet to make them full of vitality and a lot of Terrnaite Ore to bleach them.\"";
+
+	menu
+		"Please have a look, i have what you asked", L_Check2,
+		"On my way to get what you need.", -;
+	close;
+
+
+L_Check2:
+	if (countitem("InfantryHelmet") > 0 && countitem("WarlordHelmet") > 0 && countitem("TerraniteOre") > 0)
+		goto L_Progress2;
+	goto L_More_Needed2;
+
+
+L_More_Needed2:
+	mes "[Warrior]";
+	mes "\"I am sorry but i can see that you don't have all that i asked you.\"";
+	next;
+	mes "[Warrior]";
+	mes "\"Please bring me that or i won't be able to make something really special for you.\"";
+	close;
+
+// ----------------------------------------------------
+// Got Desert
+// ----------------------------------------------------
+L_Progress2:
+	if (@inventorylist_count == 100) goto L_noRoom;
+	delitem "InfantryHelmet", 1;
+	delitem "WarlordHelmet", 1;
+	delitem "TerraniteOre", 20;
+	getexp 60000, 0;
+	getitem "DesertHelmet", 1;
+	set QUEST_Warrior1, 2;
+	mes "[Warrior]";
+	mes "\"There you go a special Desert Helmet!.\"";
+	close;
+L_noRoom:
+	mes "[Warrior]";
+	mes "\"You don't have enough room left for helmet... Please do spring cleaning in your inventory.\"";
+	close;
+
+L_Done1:
+	mes "[Warrior]";
+	mes "\"Hello winged friend! How is the wind today?\"";
+
+	menu
+		"Calm, perfect for a fly!", L_Fly,
+		"Gale, not good to fly.", L_Wind2;
+	close;
+
+L_Fly:
+	mes "[Warrior]";
+	mes "\"Haha yes, you are right!\"";
+	close;
+
+L_Wind2:
+	mes "[Warrior]";
+	mes "\"Yep, i never fly in these days.\"";
+	close;
+
+}

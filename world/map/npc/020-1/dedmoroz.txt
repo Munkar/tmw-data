@@ -1,0 +1,106 @@
+//Ded Moroz and Snegurochka New year event 2012
+
+020-1.gat,80,68,0|script|Ded Moroz|373,{
+    if (@QUEST_Ded == 3) goto L_Done;
+    if (@QUEST_Ded == 2) goto L_Award;
+    if (@QUEST_Ded == 1) goto L_Check;
+
+    mes "[Ded Moroz]";
+    mes "Hey, congratulations with the New Year coming soon!";
+    next;
+    mes "[Snegurochka]";    
+    mes "Do you want to help us with decorating our New Year Fir Tree?";
+    menu
+        "Yes.", -,
+        "No.", L_Close;
+    mes "[Ded Moroz]";
+    mes "I was so awkward, and many of Yolkas that we broght for the New Year fest, has escaped, and all our decorations with them.";
+    mes "We need balls and toys, something about 20 of each color.";
+    mes "If you bring us the balls and toys, we will give you some nice present.";
+    menu
+        "Ok.", -,
+        "What a ripoff?", L_Close;
+    mes "[Snegurochka]";
+    mes "Please, help us a bit, and we will be waiting for you.";
+    set @QUEST_Ded, 1;
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_Check:
+    mes "[Ded Moroz]";
+    mes "Nu nu, let's see what have you now.";
+    next;
+    getinventorylist;
+    if (countitem("RedBall") < 20 ) goto L_NotEnough1;  
+    if (countitem("BlueBall") < 20) goto L_NotEnough2; 
+    if (countitem("GreenBall") < 20) goto L_NotEnough3;
+    if (countitem("VioletToy") < 20) goto L_NotEnough4;
+    if (countitem("YellowToy") < 20) goto L_NotEnough5;
+    if (countitem("CyanToy") < 20) goto L_NotEnough6;   
+    delitem "RedBall", 20;
+    delitem "BlueBall", 20;
+    delitem "GreenBall", 20;
+    delitem "VioletToy", 20;
+    delitem "YellowToy", 20;
+    delitem "CyanToy", 20;
+    mes "[Snegurochka]";
+    mes "How nice! you have brought all that we need! Thank you, "+strcharinfo(0)+".";
+    next;
+    set @QUEST_Ded, 2;
+L_Award:
+    getinventorylist;
+    if (@inventorylist_count == 100) goto L_noRoom;
+    if (Sex == 1) goto L_GetMale;
+    mes "[Snegurochka]";
+    mes "Well, "+strcharinfo(0)+", now take my Kokoshnik for a present.";    
+    getitem "Kokoshnik", 1;
+    set @QUEST_Ded, 3;
+    goto L_Close;
+L_GetMale:
+    mes "[Ded Moroz]";
+    mes "Well, "+strcharinfo(0)+", I give you my hat for a present.";    
+    getitem "DedMorozHat", 1;
+    set @QUEST_Ded, 3;
+    goto L_Close;
+L_NotEnough1:
+    mes "[Ded Moroz]";
+    mes "Sorry, "+strcharinfo(0)+", but you brought less than 20 red balls. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_NotEnough2:
+    mes "[Snegurochka]";
+    mes "Sorry, "+strcharinfo(0)+", you have less than 20 blue balls. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_NotEnough3:
+    mes "[Ded Moroz]";
+    mes "Sorry, "+strcharinfo(0)+", but you brought less than 20 green balls. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_NotEnough4:
+    mes "[Snegurochka]";
+    mes "Sorry, "+strcharinfo(0)+", you have less than 20 violet toys. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_NotEnough5:
+    mes "[Ded Moroz]";
+    mes "Sorry, "+strcharinfo(0)+", but you brought less than 20 yellow toys. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_NotEnough6:
+    mes "[Snegurochka]";
+    mes "Sorry, "+strcharinfo(0)+", you have less than 20 cyan toys. Please get some more.";
+    areamonster "020-1.gat",75,63,93,74,"Yolka",1096,100;
+    close;
+L_noRoom:
+    mes "[Ded Moroz]";
+    mes "Sorry, you have not enough room in your inventory, "+strcharinfo(0)+".";
+    close;     
+L_Done:
+    mes "[Ded Moroz and Snegurochka]";
+    mes strcharinfo(0)+", enjoy the New Year! S Novym Godom!";   
+    close;
+L_Close:
+    mes "[Ded Moroz and Snegurochka]";
+    mes "S Novym Godom! Happy New Year, "+strcharinfo(0)+"!";
+    close;
+}

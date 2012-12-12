@@ -1,0 +1,40 @@
+//
+
+001-3.gat,77,37,0|script|Phaet|125,{
+    mes "[Phaet the Royal Guard]";
+    mes "\"Do you want to go back?\"";
+    next;
+    menu
+        "Yes", L_Sure,
+        "No", -;
+    mes "Have fun.";
+    close;
+
+L_Sure:
+    mes "[Phaet the Royal Guard]";
+    mes "\"Ok.\"";
+    next;
+    warp "001-2.gat", 25, 23;
+    close;
+}
+
+001-3.gat,69,37,0|script|Aradin|126,{
+    mes "[Aradin the Royal Guard]";
+    mes "Do you want to summon Reaper?";
+    menu
+        "Sure.", L_Yes,
+        "Never.", L_No;
+L_Yes:
+    mes "[Aradin the Royal Guard]";
+    mes "So you got one...";
+    areamonster "001-3.gat", 70,30, 80,40, "Reaper2",1068, 1, "Aradin::OnKilled";
+    close; 
+
+L_No:
+    mes "[Aradin the Royal Guard]";
+    mes "Get out, a piece of dweeb!";   
+   close;
+
+OnKilled:
+    npctalk "Well, " + strcharinfo(0) + " is a mighty fighter.";
+}
