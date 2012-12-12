@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="75" height="50" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="name" value="Beach House"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/collision.tsx"/>
+ <tileset firstgid="3" source="../tilesets/inn.tsx"/>
+ <tileset firstgid="259" source="../tilesets/inn2.tsx"/>
+ <tileset firstgid="515" source="../tilesets/inn_x2.tsx"/>
+ <tileset firstgid="547" source="../tilesets/inn_x3.tsx"/>
+ <layer name="Ground1" width="75" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3VsQ2DQAwF0Mv+4+SYJNkgWYIuSGkiCnDBYRO94hU0yPrf1s2ttRkAAAAAAP7U/RZzhRlHz3zFrHrSzNPq/7/fj8WzYFYR/eS9ei3ehbNa93zGDe7t9IiOjupza/as/a6U1d4+ZWQ1Fc0qq9/oTmdmFX33RvfrBo/LqhfMKusWol1lZgUAAAAAAHx9AO1idNGYOgAA
+  </data>
+ </layer>
+ <layer name="Ground2" width="75" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3VSwrCMABF0YAonVfQed2B9bMDl+DCdAGKbrIzn0ggFGkSME2kd3BGGfTyaNPOGNMBAAAAAAAAQAFmsvCoCmusBs7mCZtrWXrUmbeyjSdZ9Xr6/Xs5yDFBRyMbjybzVrbx7PTc5O6crZ2zVM3bQDm3sg27iN4UzUPPusi1oK1itCN3POT5p1uN/V6V9g2ylV/LVj9rfG/57d5nq4+Qf+LUt4r5Hqe+FfcVAAAAAAAAAAAI8QLiWJlimDoAAA==
+  </data>
+ </layer>
+ <layer name="Lower" width="75" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3SQQqAIBBAUXFdULeo7n+19s0+d4FO9R4IopuPTikAAAAAAPA/Wx1dkM8eb3LU+751n8kUTXOCrnN0AF34Z54yQ3zBEmttnGec74xNAAAAAAAAb3cBABkStZg6AAA=
+  </data>
+ </layer>
+ <layer name="Fringe" width="75" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3RsQ0AIAwDsIoZ/n+XB1hYUInstUuaVAEAAAAAAJBmjqo17m+vs/CvTrt2ytJRUj9JvySz05leAAAAAACAFBtIwcR6mDoAAA==
+  </data>
+ </layer>
+ <layer name="Over" width="75" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3OoREAAAgDMfbfGBQb1CJI7l7VtAoAAAAAAAAAgI86NGG7+gEAAAAAANxbMiernpg6AAA=
+  </data>
+ </layer>
+ <layer name="Collision" width="75" height="50" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3SMQrDMBAEwMP/f3SaVCI5Rw4rqRjBgJGLW1Z3VdUFAAAAAADwVsN3DXe7s42n+5fK/m1Geu6KzlbtU3ruvx11OVOZZzKc0NVM7nRXd/e7uxozdSeR45e3OrGrLmci82yG07takfnTnOS8J9me7liio+4dT+hq9uzKsXu3AAAAAACAqhfu4A4BmDoAAA==
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="75" height="50" visible="0">
+  <object name="To Outside" type="warp" x="704" y="928" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="003-1"/>
+    <property name="dest_x" value="1536"/>
+    <property name="dest_y" value="1184"/>
+   </properties>
+  </object>
+  <object name="To Outside" type="warp" x="1792" y="928" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="003-1"/>
+    <property name="dest_x" value="1888"/>
+    <property name="dest_y" value="960"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

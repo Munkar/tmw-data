@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<sprite>
+  <imageset name="base" src="graphics/sprites/npcs/dedmoroz.png" width="70" height="70"/>
+  <action name="stand" imageset="base">
+    <animation direction="default">
+      <frame index="0"/>
+    </animation>
+  </action>
+</sprite>

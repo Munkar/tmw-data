@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<sprite name="player" action="stand">
+  <imageset name="fist" src="graphics/sprites/weapon-fist.png" width="64" height="64"/>
+  <action name="default" imageset="fist"/>
+</sprite>

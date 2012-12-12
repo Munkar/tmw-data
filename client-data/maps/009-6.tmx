@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="70" height="70" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="music" value="finalman_and_yakslem-cavesong.ogg"/>
+  <property name="name" value="Cave"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/collision.tsx"/>
+ <tileset firstgid="3" source="../tilesets/cave.tsx"/>
+ <tileset firstgid="131" source="../tilesets/woodland_indoor.tsx"/>
+ <tileset firstgid="387" source="../tilesets/woodland_indoor_x2.tsx"/>
+ <tileset firstgid="403" source="../tilesets/woodland_indoor_x3.tsx"/>
+ <tileset firstgid="419" source="../tilesets/barbarians-outdoor.tsx"/>
+ <layer name="Ground" width="70" height="70">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3XuU7DQBSF4VsFGkgDJA2kCUtAkCYsgZYt8Cw8ACDx7FwrvtLYGidxsMXM5C++xovkOTp3bPdEpAcAAAAAAAAAAAAEYqTOHXsBPFMIpureMVQXATzXf+urN8dEPQTwXG3Yl+JslFkfshk6U5/qS32rR/UewBrayORYirNRZn3IZuhObZUcBLCONjK5luJslFkfZurVk8uJpLPHjJxMnjxr9fWhX3H+RtLZY6YrZmJ9OJX53uI7/yzp7DGzFTOxPtyKf29JbY+pmomqPryIf28pd8rE+r1XJ5c6nTLDSLNpOhfrlJlEmk3Tueyo3VxX5t97lk1M7/CmczlUR7lBfsyyiekd3nQul+oqN3aOx/af0EQuNjvdJdfFlEtm+4+52OwMnGMfCeRSpzMdT442O+Ml96aaS2eNHMv3xmSVdXZqXh9zHq5Fe4xvbb7rfxLJoq2OpfLvuC5fZza5K4uy2fSu+LKhKwAAAAAAAAAANOsXESRXtJBMAAA=
+  </data>
+ </layer>
+ <layer name="Ground2" width="70" height="70">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3UwQmAMAxA0bqEdQJ1DEFczFUcyYWMF8FzkVJ5D/49BJKUAAAAAAAAgBYsXe0JgD87/JiXs/YANGWN++mjHA1u6XHvZYymaI42uwEosvujAAAAAAAAAAB86AJMlQLSkEwAAA==
+  </data>
+ </layer>
+ <layer name="Fringe" width="70" height="70">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3WTWrCUAAE4GTbu3iDnsHeoN6g3sAurC0VxR8QVChoT9qBCC4kXail8PJ9MORtEjIDgVQVAAAAAAAAANB1k7qq3uv/fou/tzh1/Mh1nLwln8m0A93bLDvcvc3qik0ec89D0it0z02hvW61vuMu82Sb7E5nGl9JPzs/1c2Zs+dsMvBtXnjJJsMCdpmlwzw5JMfk+8ZOo9z/WsAube71L7vLM/YF7wQAAAAAAAAA8JsfqFZrtZBMAAA=
+  </data>
+ </layer>
+ <layer name="Over" width="70" height="70">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3VQQqDMBAF0MmmCvYCTe9/T81OhFB1kVR9D2aXgcxnSCIAAAAAAAAAAGCfV4oYlhpT75sAAE8yLfXtfYkb+IQct0om7w69/+zsXKUvn+zt7dcbs81kz/kc181jrcyaK3X12Vqq7cxd35Ej/PF162zsCgAAAAAA0MIMdz9NhpBMAAA=
+  </data>
+ </layer>
+ <layer name="Collision" width="70" height="70">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3WQQqEMAxA0Y73P/SsClKi1hk1al/ggQuR5iPoVEqZAAAAAAAAAHiV+WSf5U7KwvXoRuvSu2M72ec+u8kn0O4dTfbZzxL1WOsSdcre4ar3RJf1LrXN1mTvcXSTni49bbJ3ubLL3pk/N3u3u3Z5epvIP22iTk9Tp31P2j6jdaltjvgezVu8oU+d3n+YXyZ7xzO6tHuN0GSrS7TX23v07Np7/7Rx/yj2dhyJJn1tss9yN5oAAAAAAMDxvm/SJBuQTAAA
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="70" height="70" visible="0">
+  <object name="To Hurnscaldcave" type="warp" x="1152" y="1536" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="009-3"/>
+    <property name="dest_x" value="5184"/>
+    <property name="dest_y" value="2624"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

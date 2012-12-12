@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="minimap" value=""/>
+  <property name="music" value=""/>
+  <property name="name" value="Mountain Cave"/>
+  <property name="overlay0image" value=""/>
+  <property name="overlay0parallax" value="1.0"/>
+  <property name="overlay0scrollx" value="0.2"/>
+  <property name="overlay0scrolly" value="0.1"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/collision.tsx"/>
+ <tileset firstgid="3" source="../tilesets/cave.tsx"/>
+ <tileset firstgid="131" source="../tilesets/cave_bilevel.tsx"/>
+ <tileset firstgid="387" source="../tilesets/cave_bilevel.tsx"/>
+ <layer name="Ground" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt3DFOwzAUh/FurMBAGYGFFViQuAASd+EAFKmXRZwAsWMJRcqQpE77bP/f8zf8xhLJX+3EbsR2s9lsAQAAAAAAAAAAAOAIX8l9R74FxnzJT/Lc2HlykVwWvs5L8isw5kt2yWtjN8ltclf4Om/JlcCYL7lOzhp7SB6TpwrXoocWjz3ejcfgQ6CD5x6tWX8f6DFvX+kz9Kj/Xe+1R4v1v9Q1I/SY8tmgUe891qzbO4Gxjt7DmsKcoocWetR16HmOHlrooYUeeSz2G/uMv0OP9WPK/MgfG6Wz2t56DE45gzrUz2pPkvt3IvSoreS+kR5a6KGFHlqi9FA4C6RHPPT4/21kCj3q95hrYdHkmL08Pcr1GMvds3rvYXme1HqtitDDgzVnavTQEq0H57taPUqb23da7UfpoSV6D2/rV8Qea9YOtV7ee6i9n957j2jocZrhfIDnK594/8rWMA/G9y3Lexg9tETrsWYdtzgbnpobp9xLvPco/f5mqevOfd57j9pKvzdBj+OM16mhkcVcpYcWetS39HwctcfU2uHhnbmoPUqZ2l/z/0sOj5FXEXpYa7WnoUc9uXO4px5T93O137N66KE25r33WNLiWaDH/YdX9Kgn57mNHlrooUW9BwAAAAAAAAAAAAAAHv0Bsu/rTw==
+  </data>
+ </layer>
+ <layer name="Fringe" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1D9OAkEYh+HdytCBhQYr4ARCY0XtabiAJh5T/hxgDV4AofJHt+UmkJ1inyd5szPdl5nMVhUAAAAAAAAA3MdbK8p47xj9+2gFAAAAAAAAAADAbdalB4CefNdVtU27Vvt0qEtPNkxNzv0nfWa9SV/pmP2v+yiiSaf01+qcLiWHGrDrfTzkLYzznaTHNKrdRylPOfvnNMt6nhZpmv2L/1VRr2mZVqUHAQAAAAAAAAAAAAAAAAAAAAAAoLN/cLcaRw==
+  </data>
+ </layer>
+ <layer name="Over" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt07FtQgEQBNFvEeIKTGP0XwlIdrIJmTVf8EaaAm5Wdz+O406SJEmSJEmSJEmSfAs/jbr3Ky9f/3j4ybj+3Vo39xu/3OxxSurm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6ub2WOrm9ljq5vZY6uavvD79+SC/T9CcJEmSJEmSJEmSJMl38wFuLnV6
+  </data>
+ </layer>
+ <layer name="Collision" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt09FqAkEQRNGO///ReVowstERnane3TNwQfKi1EnfquomSZIkSZIkSZIkSZJ0gX4uUHrj0arBVkyudRs8epbemsfxParBbjz+emwvvR+PfZezGKW3/sTjP6P0pjzOY5beOuGxmTx7PNZ6jNxJwia9ddrj/qVugseYT8IovfW3PGZtt9oovXWn+0i68+BxBo/ZJumtefDgwYMHj1ntvTNaHMVjb5O0C485/+ujj8d8j3dNavJvubrH9p599woDHuMbbG481njUi+9eacFj7D545O7jcRMe6z1Wb87jOKW35sHjvmpgwKNv6a07eRSPVh4dSm/Ng8erikcrD/fBg0fP0lsfxaN4tPJwHz09tsejRzMteLx3E9ubaZPe+igeq+4lvfXRPdxHT49vmaW35sHjE5Pa+Xz/Nx7nKr01Dx6dS2/Ng0fn0luPVA12WlE12FqSJEmSJEmSJEmSpDP2C280QDo=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="100" height="100">
+  <object name="ToWoodland" type="warp" x="1536" y="1632" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="057-1"/>
+    <property name="dest_x" value="49"/>
+    <property name="dest_y" value="31"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

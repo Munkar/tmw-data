@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="98" height="87" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="name" value="Beach House"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/collision.tsx"/>
+ <tileset firstgid="3" source="../tilesets/inn.tsx"/>
+ <tileset firstgid="259" source="../tilesets/inn2.tsx"/>
+ <tileset firstgid="515" source="../tilesets/inn_x2.tsx"/>
+ <tileset firstgid="547" source="../tilesets/inn_x3.tsx"/>
+ <layer name="Ground1" width="98" height="87">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3asQ2DQBQFwXP/5VCK3YFpgsxkzi3DrWCCyf/TCqLbxhgbAAAAAAAAAJe0PH43+/Yjt529u3ZPZZsOjW06NLbp0NimQ2ObDo1tOjS26dDYdubu2j21fb6H+9EBAAAAAAAAAIB/Kr1Hqb6d0mH+TTo0btKhcZMOjZt0aNykQ+MmHRo3FTs8dy8dpu9+71YdEi38l3S4cocSHRp0AAAAAAAAAICvD4wDpgo4hQAA
+  </data>
+ </layer>
+ <layer name="Ground2" width="98" height="87">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3cy07CQBSA4TEioi6rAXVDgoqXJYn4BjwCD6Z7r3sv0bWXt2LnadKGadPLAE5nWv/Fl2bSE3rOHErbpMNMKTUDAAAAAAAAAAAAGmRdtEQ70hFbYlvsaPs3tJhWFOc690Vqi2vIGqdrvhV34l48pD7PVt2B2BO7kXC8Lw7EobgUY3GlxQyjONfzbFJbmO9EdLVxTK9Nr/lZvIhX8Zb6PFt1D8SRJhyfiXNxoe3X43rR2PU8m9Y2zaghHse16DV/ii/xLX7U/NwYWKx7tALX82yztqrrLjre+xp9cNmHsvmnD37l6nqe6QN98ClX1/NMH+iDy1zT12/X89yUPviWj2/1VX0+lN2n5u13Pc9N4tv3AgAAAAAAAAAAAACAOgrXjrSXYGO9SVEunQVi6ihQybUnpgKLuQy14xynjhfHdKPtieWcqhKvPemp5BqUMjbWm/QLjtfPiDnNiakjk/ewfHlvzzSmjsLcPxac/6r6kPWeapP74Mt7cv/9fKAP7i3bg/C3jD7Yrd30evHXucTr6jvR5+vr7DdT26y4Oj8/+PS7FKj5c8BIJZ9t9DX1k5y4wIP5tN2H8N7lWrY3Fvug/yfASCXX1ev7pjlxdfjvgKIemD43PIoni31Y5dxs4vXBVc30IV/RNZs+NJNJ/8vu5VzX0AScDwAAAAAAAAAAAAAAzP0CB1NS+DiFAAA=
+  </data>
+ </layer>
+ <layer name="Fringe" width="98" height="87">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3bSS4EURwH4Eobgxb22BiCG+ACxp2FGFYsxLBCHNNwAcMd7P07TdIqlG50Pdr3Jb9UXqUq9YYaUsl7WQYAAAAAAABAp5ut1PPdY367nqh/b6Tvl7WjK1eflchCZDGyVHDeU/uq9GO6o239TfZ3Y5uvIteRm8ht7rjBhOO3nO7SSdxF7iMPkce0VXljK0t7H/wHc9G/87k+3o8cRC5ftoeZcXhVZj+cRc4bclHepckZqLzd5m2WV5WkJku6/997L3WKqTa0y/u5de0YB1r33jhMx74Z4wMAAAAAAAAAACQwEhlNeP3VyFpBuWY9slFQ/ouGKllWbWLeWG1dTRlzTLcjOwXlmt3IXkGZ7zuKHBeUa04ipwXlTvHZM1LWHO//6C+s56Ou2W9JO7zOifYsAmUailQjww37Uv/PpND4rU7xLRiLjEcmvnCu9TM/66N1nwAAAAAAAAAAQFrPy1fSdTiFAAA=
+  </data>
+ </layer>
+ <layer name="Over" width="98" height="87">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3bMQqAMAwF0JzR43sTO+ngYhEkWmkp70EoZMqQbvkRAAAAAAAAAAAwjqX3AAAAnay9B/jZdlQ535bFvDJ7UOK6XwAAAAAAAAAAAADwRn2rfHe//NQD4LvZczaQJX8FY8rkJusMnD8KAAAAAAAAwGx2jighIziFAAA=
+  </data>
+ </layer>
+ <layer name="Collision" width="98" height="87">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3S0YqEMAwFUPH/P3qfFgYpTnZrk6gncJgHi3PT675t2w4AAAAAAAA83u9U53g7PfTw2UNWJ59z9uzsXGeRifSwcu9oxkj2blZN9beSkeetPYwyR/eqvueKHjKzzpzrZNVkZt0PvxlZOvYwek+3zNX3nNVFxs4dM3XZL2vvbnkyeuj6/XXL81YzU50dAAAAAAAAAAAYi87o7Iosx1zHZ5EzdzQzeljbw7eOVu38baJn7ugvO67eOfJ/2Zmye4jMqLusLP85dyczszrXlee6mxk96OFJPYzu9XjHZ9Pp+6i+y+x9V+6+bf0yvbWH2am+zye4Yqp3eIIrpnoHAAAAAAAAALjKDxwdMWo4hQAA
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="0" height="0" visible="0">
+  <object name="To Room" type="warp" x="1216" y="640" width="64" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="2368"/>
+    <property name="dest_y" value="928"/>
+   </properties>
+  </object>
+  <object name="To Entrance" type="warp" x="2368" y="960" width="64" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="1216"/>
+    <property name="dest_y" value="672"/>
+   </properties>
+  </object>
+  <object name="To Outside" type="warp" x="672" y="928" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="004-1"/>
+    <property name="dest_x" value="2560"/>
+    <property name="dest_y" value="1024"/>
+   </properties>
+  </object>
+  <object name="To Basement" type="warp" x="1984" y="896" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="672"/>
+    <property name="dest_y" value="1952"/>
+   </properties>
+  </object>
+  <object name="To First Floor" type="warp" x="640" y="1984" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="2016"/>
+    <property name="dest_y" value="864"/>
+   </properties>
+  </object>
+  <object name="To First Floor" type="warp" x="2144" y="2112" width="64" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="1120"/>
+    <property name="dest_y" value="608"/>
+   </properties>
+  </object>
+  <object name="To Second Floor" type="warp" x="1120" y="576" width="64" height="32">
+   <properties>
+    <property name="dest_map" value="004-2"/>
+    <property name="dest_x" value="2144"/>
+    <property name="dest_y" value="2080"/>
+   </properties>
+  </object>
+  <object name="To Roof" type="warp" x="1824" y="2112" width="32" height="32">
+   <properties>
+    <property name="dest_map" value="004-1"/>
+    <property name="dest_x" value="2752"/>
+    <property name="dest_y" value="896"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
